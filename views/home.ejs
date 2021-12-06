@@ -4,8 +4,9 @@
 
 <p><%= startingContent %></p>
 
-<% posts.forEach(function (post) { %>
-<% console.log(post.title); %>
+<% posts.forEach(function(post) {%>
+<h1><%= post.title %></h1>
+<div style="white-space: pre-wrap"><%= post.body %> </div>
 <% }); %>
 
 <%- include("partials/footer"); -%>
