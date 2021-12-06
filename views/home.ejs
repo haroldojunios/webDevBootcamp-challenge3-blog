@@ -6,7 +6,13 @@
 
 <% posts.forEach(function(post) {%>
 <h1><%= post.title %></h1>
-<div style="white-space: pre-wrap"><%= post.body %> </div>
+<p>
+  <% if(post.body.length < 100) { %>
+  <%= post.body %>
+  <% } else { %>
+  <%= post.body.substring(0,100) + "..." %>
+  <% } %>
+</p>
 <% }); %>
 
 <%- include("partials/footer"); -%>
