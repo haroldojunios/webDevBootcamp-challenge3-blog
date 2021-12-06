@@ -46,7 +46,9 @@ app.get('/posts/:postName', function (req, res) {
   const requestedTitle = _.lowerCase(req.params.postName);
   posts.forEach(function (post) {
     const storedTitle = _.lowerCase(post.title);
-    if (requestedTitle === storedTitle) { console.log("Match found!"); }
+    if (requestedTitle === storedTitle) {
+      res.render("post", { post: post });
+    }
   });
 });
 
