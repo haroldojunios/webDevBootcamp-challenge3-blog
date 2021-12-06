@@ -12,6 +12,7 @@
   <% } else { %>
   <%= post.body.substring(0,100) + "..." %>
   <% } %>
+  <a href="<%= "/posts/" + post.title %>">Read more</a>
 </p>
 <% }); %>
 
